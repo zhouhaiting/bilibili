@@ -1,0 +1,1309 @@
+/*============头部导航栏===========*/
+/*这块的背景图片需要注意一下，需要给div宽高，图片才能显示，背景定位需要按照顶部居中*/
+header{
+	width: 100%;
+	/*height: 170px;*/
+	background: url(../images/top.png) no-repeat top center;
+}
+/*顶部蓝色导航栏*/
+.nav{
+	height: 42px;
+	background: rgba(46,77,147,0.8);
+}
+/*插入背景图片*/
+.logo-img{
+	width: 100%;
+	height: 170px;
+}
+
+/*设置一个中间居中的盒子 ，分为左右两部分*/
+.nav-middle{
+	width: 980px;
+	height: 42px;
+    margin: 0 auto;
+}
+.left-nav li{
+   float: left;
+   /*margin-right: 20px;*/
+   line-height: 42px;
+}
+.left-nav li a{
+	color:#fff;
+	display: block;
+	padding: 0 10px;
+}
+.bg2,.bg3,.bg4,.bg5,.bg6,.bg7,.bg8,.bg9{
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: url(../images/icons.png);
+}
+.bg2{
+	width: 17px;
+	height: 19px;
+	margin-top: 12px;
+	margin-right: 5px;
+	background-position: -854px -87px;
+}
+/*左边lihover 的时候，出现一个透明的颜色*/
+.left-nav li a:hover{
+	background: rgba(114,159,200,0.5);
+}
+.right-nav li{
+	height: 42px;
+   float: left;
+   line-height: 42px;
+   position: relative;
+}
+.right-nav li a{
+	color: #fff;
+	display: block;
+	padding: 0 10px;
+}
+/*右边lihover 的时候，出现一个透明的颜色*/
+.right-nav li a:hover{
+	background: rgba(114,159,200,0.5);
+}
+/*最后一个li投稿下的a是不需要加hover 效果的*/
+.right-nav li:last-child a:hover{
+    background: rgba(114,159,200,0.0);
+}
+/*最后一个投稿的，粉色背景*/
+.right-nav .pink{
+	width: 58px;
+	height: 48px;
+	background-color: #ee5b8c;
+	border-radius: 0 0 5px 5px;
+}
+/*历史下面隐藏的div ,display：none*/
+.history{
+	width: 402px;
+	height: 182px;
+	background-color: #fff;
+	position: absolute;
+	top:40px;
+	left: -200px;
+    display: none;
+    transition: 1s;
+    z-index: 99;
+}
+.history p{
+	text-align: center;
+}
+/*隐藏的div下面的登录按钮，平滑效果：把border和outline都去掉*/
+.history input{
+	display: block;
+	width: 46px;
+	height: 23px;
+	margin-left: 180px;
+	outline: none;
+	border-radius: 5px 5px;
+	border: none;
+	background-color: #1894FB;
+}
+/*hover 一级菜单的时候让隐藏的出现*/
+.right-nav li:hover .history{
+	display: block;
+}
+/*hover 隐藏区域的时候也得是，display：block的，要不然的话选不中二级菜单*/
+.history:hover{
+	display: block;
+}
+/*投稿下面的，隐藏div*/
+.second{
+	width: 215px;
+	height: 64px;
+	background-color: #fff;
+	position: absolute;
+	top: 42px;
+	left: -160px;
+	display: none;
+	z-index: 99;
+	/*transition:all 1s ease 0.5s;*/
+}
+.second li{
+	width: 70px;
+}
+/*文字注释，斜体改成正常，变成块换到下一行*/
+.second em{
+	font-style: normal;
+	display: block;
+}
+.right-nav li:last-child:hover .second{
+	display: block;	
+}
+.second:hover{
+	display: block;
+}
+.h-middle{
+	width: 980px;
+	height: 130px;
+	margin: 0 auto;
+	position: relative;
+}
+/*搜索框位于header绝对定位*/
+.search{
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+}
+/*搜索框的input*/
+.search input{
+	width: 269px;
+	height: 34px;
+	border-radius: 5px 5px;
+	background: rgba(255,253,253,0.7);
+	outline: none;
+	border:none;
+	padding-left: 10px;
+	position: relative;
+
+}
+/*放大镜图片*/
+.bg4{
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	width: 22px;
+	height: 20px;
+	background-position: -791px -728px;
+}
+/*bilibili夏，logo图*/
+.logo{
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+/*排行榜*/
+.ranking{
+	width: 68px;
+	height: 32px;
+	background: #fff;
+	border-radius: 5px 5px;
+	position: absolute;
+	bottom: 20px;
+	right: 280px;
+}
+/*排行榜背景图*/
+.bg3{
+	width: 17px;
+	height: 17px;
+	background-position: -664px -662px;
+}
+.ranking span{
+	font-size: 12px;
+	color: #f25d8e;
+}
+/*============正文980px居中开始==========*/
+article{
+	width: 980px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.menu{
+	width: 980px;
+	height: 50px;
+}
+.menu ul li{
+	margin-right: 18px;
+	float: left;
+	margin-top: 10px;
+}
+.menu .side-menu:last-child{
+	margin-right: 0;
+}
+.bg6{
+	width: 18px;
+	height: 18px;
+	background-position:-663px -919px;
+}
+.bg7{
+	width: 19px;
+	height: 18px;
+	background-position:-665px -535px;
+}
+.bg8{
+	width: 20px;
+	height: 19px;
+	background-position:-728px -536px;
+}
+.side-menu span{
+	font-size: 18px;
+}
+.menu ul li a{
+	color: #000;
+}
+/*粉色的数字块*/
+.menu ul li .num{
+	height: 14px;
+	padding: 1px 3px;
+	background-color: #ffafc9;
+	border-radius: 4px;
+	min-width: 18px;
+	margin-bottom: 2px;
+	color:#fff;
+	font-size: 12px;
+
+}
+.menu ul li img{
+	padding-left: 5px;
+	vertical-align: middle;
+}
+
+/*粉红色带有轮播图下面的模块*/
+.section1{
+	margin-top: 10px;
+}
+
+/*右边的6张小图片*/
+.pics{
+	width: 521px;
+	margin-left: 10px;
+	position: relative;
+}
+/*每个li相对定位，左浮动*/
+.pics ul li{
+	position: relative;
+	margin-right: 20px;
+	float: left;
+	margin-bottom: 20px;
+}
+.pics ul li img{
+	width: 160px;
+	height: 98px;
+	border-radius: 5px 5px;
+}
+.pics ul li:nth-child(3){
+	margin-right: 0;
+}
+.pics ul li:nth-child(6){
+	margin-right: 0;
+}
+/*hover出现的隐藏的rgba颜色*/
+.pics .hide{
+	width: 160px;
+	height: 98px;
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.hide p{
+	font-size: 12px;
+	color: #99a2aa;
+	padding-left: 5px;
+}
+.hide .one{
+	padding-bottom: 10px;
+	padding-top: 7px;
+	color: #fff;
+}
+/*hoverli 的时候，隐藏的出现*/
+.pics ul li:hover .hide{
+   display: block;
+}
+/*hoverli 的时候，定位的文字隐藏*/
+.pics ul li:hover .ding{
+   display: none;
+}
+/*定位的文字隐藏 ，带有渐变颜色*/
+.ding{
+	width: 160px;
+	height: 20px;
+	border-radius: 5px 5px;
+	position: absolute;
+	bottom: 5px;
+	color: #fff;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(1,rgba(0,0,0,0.9)));
+	font-size: 12px;
+}
+.yest{
+	width: 36px;
+	height: 53px;
+	background:rgba(0,0,0,0.7);
+	position: absolute;
+	left: 0;
+	top: 80px;
+	z-index: 99;
+	color: #fff;
+	opacity: 0;
+	transition: all 1s;
+}
+.today{
+	width: 36px;
+	height: 53px;
+	background:rgba(0,0,0,0.7);
+	position: absolute;
+	right: 0;
+	top: 80px;
+	z-index: 99;
+	color: #fff;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.pics:hover .yest,.pics:hover .today{
+	opacity: 1;
+}
+
+/*==========推广模块===========*/
+.generalize{
+	width: 980px;
+	height: 204px;
+	margin-top: 20px;
+}
+.bg5{
+	width: 38px;
+	height: 31px;
+	margin-right: 10px;
+	background-position: -143px -80px;
+}
+/*上边的title块*/
+.title{
+	height: 48px;
+}
+.title .p2{
+	line-height: 48px;
+	color: #8e8e8e;
+}
+.title a #p1{
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+}
+/*右浮动的在线人数*/
+.line{
+	width: 256px;
+	height: 36px;
+	background-color: #e5e9ef;
+	border-radius: 5px 5px;
+	line-height: 36px;
+	text-align: center;
+}
+/*下边图片的div*/
+.gen-pic{
+	width: 980px;
+}
+.gen-pic ul li{
+	width: 160px;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+}
+.gen-pic ul li:last-child{
+	margin-right: 0;
+}
+.gen-pic ul li p{
+	font-size: 12px;
+	margin-top: 10px;
+}
+/*图片隐藏的的遮罩效果*/
+.hide1{
+	width: 160px;
+	height: 100px;
+	border-radius: 5px 5px;
+	background:rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.5s;
+}
+/*隐藏区域右下方的时间，绝对定位*/
+.hide1 img{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+/*hover的时候，让遮罩效果显示*/
+.gen-pic ul li:hover .hide1{
+	opacity: 1;
+}
+/*hover的时候，让下方的文字变成蓝色*/
+.gen-pic ul li:hover .note{
+	color: #4853F8;
+}
+/*定位在图片左下方的时间 11:10*/
+.hide1 .time{
+	position: absolute;
+	bottom: 5px;
+	left:5px;
+	color: #fff;
+}
+/*八周年生日广告图*/
+.ad img{
+	width: 980px;
+	height: 80px;
+	border-radius: 5px 5px;
+	margin-top: 50px;
+}
+/*==========正在直播模块开始=======*/
+/*正在直播整个div，宽为980*/
+.tving{
+	margin-top: 10px;
+}
+/*左边的图片列表*/
+.tving-left{
+	width: 715px;
+}
+/*上边的title*/
+.tving-title{
+	width: 720px;
+	height: 45px;
+}
+/*插入小图标*/
+.tvingi,.coni{
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: url(../images/icons.png);
+}
+.tvingi{
+	width: 39px;
+	height: 32px;
+    background-position: -141px -656px;
+}
+.p3{
+	font-size: 23px;
+	color: #222222;
+	padding-left: 10px;
+	line-height: 44px;
+}
+.p4,.p5{
+	color: #8e8e8e;
+	padding-left: 20px;
+	line-height: 44px;
+}
+.condition{
+	width: 104px;
+	height: 25px;
+	border-radius: 5px 5px;
+	border: 1px solid #ccc;
+	line-height: 24px;
+	font-size: 12px;
+	color: #323131;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.condition .coni{
+	width: 15px;
+	height: 13px;
+	background-position: -474px -89px;
+	transition: all 0.5s;
+}
+.more{
+	width: 53px;
+	height: 24px;
+	border-radius: 5px 5px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-left: 20px;
+	text-align: center;
+	line-height: 24px;
+}
+.condition:hover .coni{
+	transform: rotate(180deg);
+}
+.condition:hover,.more:hover{
+	background-color: #9C9C9C;
+}
+/**/
+.tving-pics{
+	width: 701px;
+	height: 350px;
+}
+.tving-pics ul li{
+   float: left;
+   width: 160px;
+   height: 145px;
+   margin-right: 18px;
+   margin-bottom: 18px;
+   position: relative;
+   overflow: hidden;
+}
+.tving-pics ul li:nth-child(4){
+	margin-right: 0;
+}
+.tving-pics ul li:nth-child(8){
+	margin-right: 0;
+}
+.tving-pics .tving-pic{
+	width: 160px;
+	height: 100px;	
+}
+.tving-pics ul li p{
+	font-size: 12px;
+    color: #000;
+}
+.tving-pics ul li .t{
+	height: 15px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	transition: all 0.5s;
+}
+.alone{
+	width: 56px;
+	height: 18px;
+	border: 1px solid #ccc;
+	border-radius: 5px 0 5px 0;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	right: 0;
+	bottom: 45px;
+	color: #fff;
+}
+.hide2{
+	width: 160px;
+	height: 100px;
+	border-radius: 5px 5px;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.hide2 img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	float: left;
+	padding: 30px 30px;
+}
+.ellipse{
+	width: 47px;
+	height: 20px;
+	border-radius: 30px 30px;
+	background-color: #FF7D39;
+	margin: 50px 80px;
+}
+/*hover 图片列表下的li时，隐藏的遮罩出现*/
+.tving-pics ul li:hover .hide2{
+	display: block;
+}
+/*hover 图片列表下的li时，文字高度改变，颜色改变*/
+.tving-pics ul li:hover .t{
+	height: 30px;
+	color: #20ABF1;
+}
+/*hover 图片列表下的li时，定位的单机联机，文字消失*/
+.tving-pics ul li:hover .alone{
+	display: none;
+}
+/*===========右侧选项卡外面div，给宽高，溢出隐藏============*/
+.tving-right{
+	width: 260px;
+	height: 373px;
+	overflow: hidden;
+}
+.title2{
+	width: 260px;
+	height: 45px;
+}
+/*可以点击的每个li*/
+.title2 ul li{
+	float: left;
+	margin-right: 14px;
+	line-height: 44px;
+}
+.title2 ul li a{
+	color: #000;
+}
+.title2 ul .on a{
+   color: #3D6FFA;
+   text-decoration: underline;
+}
+/*========小的3张轮播图=======*/
+.sma-slide ul li{
+	float: left;
+    
+}
+.sma-slide{
+	width: 260px;
+	height: 248px;
+	overflow: hidden;
+	position: relative;
+}
+.sma-slide ul li img{
+	width: 260px;
+	height: 248px;
+}
+.sma-slide .note1{
+	width: 260px;
+	height: 50px;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.note1 p{
+    color: #fff;
+    padding:5px 5px;
+}
+/*椭圆的圆点*/
+.note1 span{
+	display: inline-block;
+	width: 10px;
+	height: 7px;
+	border-radius: 30%;
+	background-color: #fff;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.round{
+	margin-left: 111px;
+}
+/*第一张默认的粉色的椭圆*/
+.note1 .round .active{
+	width: 30px;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #f45d8f;
+}
+.video{
+	margin-top: 20px;
+
+}
+.video img{
+	float: left;
+}
+.bg9{
+	width: 16px;
+	height: 16px;
+	margin-top: 15px;
+	background-position: -664px -1114px;
+}
+/*对应的每个div，宽高都是一样的*/
+.tv-content{
+	width: 260px;
+	height: 323px;
+}
+/*直播排行div*/
+.seniority{
+	width: 260px;
+	height: 300px;
+	background-color: #fff;
+}
+.seniority li span{
+	width: 16px;
+	height: 16px;
+	border-radius: 5px 5px;
+	background-color: #f45d8f;
+	float: left;
+	display: inline-block;
+	margin: 0 5px;
+	text-align: center;
+}
+.seniority li img{
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	float: left;
+	padding: 0 10px;
+}
+.seniority li a p{
+	color: #000;
+}
+.seniority li{
+	margin-top: 10px;
+}
+/*里面的three div，包含着三个tv-content的大盒子，给3个260 的宽度*/
+.three{
+	width: 780px;
+	transition: all 0.4s;
+}
+/*让所有的div左浮动，在一排*/
+.three .tv-content{
+	float: left;
+}
+/*默认显示的div ，不需要了*/
+/*.three .show{
+*/	/*display: block;*/
+/*}*/
+/*========动画模块==========*/
+.animation{
+  width: 980px;
+  height: 373px;
+ /* border: 1px solid red;*/
+}
+.tving-pics ul li:hover .hide1{
+	opacity: 1
+}
+.bg11,.bg12,.bg13,.bg14,.bg15{
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: url(../images/icons.png);
+}
+.bg11{
+	width: 12px;
+	height: 14px;
+	background-position: -283px -89px;
+}
+.bg12{
+	width: 13px;
+	height: 14px;
+	background-position: -283px -217px;
+}
+.tving-pics ul li span{
+	display: inline-block;
+	margin-right: 20px;
+}
+/*右侧的选项卡，最外div*/
+.an-right{
+    width: 260px;
+    height: 360px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.an-title{
+	width: 260px;
+	height: 20px;
+}
+.an-title ul li{
+	float: left;
+	margin-right: 15px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.an-title p{
+	float: left;
+	font-size: 18px;
+	margin-right: 20px;
+}
+.an-title .on1{
+	color: #3D6FFA;
+    text-decoration: underline;
+}
+.sel{
+	width: 60px;
+	height: 22px;
+	/*border: 1px solid #ccc;*/
+	margin-top: 5px;
+}
+.look-more{
+	width: 260px;
+	height: 28px;
+	background-color: #e5e9ef;
+	border-radius: 5px 5px;
+	text-align: center;
+	line-height: 28px;
+}
+/*包着两个div 的盒子，给2个260的宽度*/
+.two{
+	width: 520px;
+	height: 360px;
+	transition: all 0.4s;	
+}
+/*让下边的每个盒子宽高都是一样的，左浮动，在一排*/
+.two .an-link{
+	width: 260px;
+	height: 360px;
+	float: left;
+}
+/*============番剧模块=======*/
+.drama{
+	width: 980px;
+	margin-top: 50px;
+}
+.drama-title{
+	width: 700px;
+	height: 37px;
+	border-bottom: 1px solid #ccc;
+}
+/*上边的一二三四，li列表*/
+.drama-title ul li{
+	width: 57px;
+	float: left;
+	/*margin-right: 30px;*/
+	line-height: 36px;
+}
+.drama-title ul li a{
+	color: #000;
+	font-size: 18px;
+}
+/*左边的部分，左浮动*/
+.drama-left{
+	width: 700px;
+}
+.drama-title .p6{
+	font-size: 24px;
+	float: left;
+	color: #000;
+	margin-right: 20px;
+}
+.drama-title .bg13{
+	width: 37px;
+	height: 38px;
+	background-position: -142px -142px;
+	margin: 0 10px;
+}
+/*默认有下划线的样式*/
+.drama-title .on2 a{
+   color: #4367F6;
+   text-decoration: underline;
+}
+.drama-title .time-sheet{
+	width: 106px;
+	height: 36px;
+	border: 2px solid #f25d8e;
+	border-radius: 5px 5px;
+}
+.time-sheet p{
+	color: #f25d8e;
+	text-align: center;
+	line-height: 36px;
+}
+/*hover，新番时间表的时候变粉色背景*/
+.time-sheet:hover{
+	background-color: #f25d8e;
+}
+.time-sheet:hover p{
+	color: #fff;
+}
+/*下边的滚动条，图片列表给出固定的高度，overflow:auto;溢出的部分产生滚动条*/
+.drama-link{
+	height: 400px;
+	margin-top: 20px;
+	overflow-y: auto;
+}
+.drama-link ul li{
+   width: 168px;
+   height: 75px;
+   margin-right: 53px;
+   margin-bottom: 33px;
+   float: left;
+}
+.drama-link ul li img{
+	width: 75px;
+	height: 75px;
+	border-radius: 5%;
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+.drama-link ul li .p7{
+	margin-top: 40px;
+}
+/*=======改变默认的滚动条样式======*/
+.drama-link::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+}
+/*箭头和滚动条的追踪都none 掉*/
+.drama-link::-webkit-scrollbar-button,
+.drama-link::-webkit-scrollbar-track{
+	display: none;
+}
+/*设置翻页的状态，背景颜色是偏白，有一像素的边框，且是圆角的*/
+.drama-link::-webkit-scrollbar-thumb{
+	background: #e5e9ef;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/*滚动条整体背景色*/
+.drama-link::-webkit-scrollbar-track-piece{
+	background:#ddd;
+}
+.drama-link{
+	display: none;
+}
+.show{
+	display: block;
+}
+.drama-right{
+	width: 257px;
+	/*height: 463px;*/
+}
+.right-title p{
+	font-size: 18px;
+	/*float: left;*/
+}
+
+.right-content{
+	margin-top: 20px;
+}
+.drama-right .weeks{
+	width: 58px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	position: relative;
+}
+.week{
+	width: 58px;
+	/*height: 20px;*/
+	border: 1px solid #ccc;
+	/*border-radius: 5px;*/
+	position: relative;
+}
+.week:hover .threeday{
+	display: block;
+	border-top: none;
+}
+.week:hover{
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+.threeday:hover{
+	display: block;
+}
+.look-more{
+	width: 260px;
+	height: 28px;
+	background-color: #e5e9ef;
+	border-radius: 5px 5px;
+	text-align: center;
+	line-height: 28px;
+}
+.threeday{
+	width: 58px;
+	border: 1px solid #ccc;
+	/*border-radius: 5px;*/
+	position: absolute;
+	top: 0px;
+	left: 0;
+	display: none;
+}
+.threeday li{
+	cursor: pointer;
+}
+/*==========动态番剧模块开始=========*/
+#news span{
+	line-height: 44px;
+	cursor: pointer;
+}
+.tving-title .p9,.tving-title .p10{
+	color: #000;
+	padding-left: 20px;
+}
+/*有新动态的默认样式*/
+#news .on3{
+   color: #2C24F5;
+   text-decoration: underline;
+}
+.tving{
+	margin-top: 50px;
+}
+.tving .tving-pics{
+	display: none;
+}
+.tving .show1{
+	display: block;
+}
+/*番剧动态右侧的div ，最外面的盒子，设置一张图片的宽高，溢出隐藏。*/
+.fanju-right{
+	width: 260px;
+	height: 348px;
+	overflow: hidden;
+}
+.especially p{
+	font-size: 18px;
+	padding:10px 20px;
+}
+/*小的轮播图 ,里面的包含img的盒子，设置2张图片的宽度*/
+.sma-slide2{
+	width: 520px;
+	height: 270px;
+	position: relative;
+	animation: move 5s infinite; 
+	/*animation的属性：动画名称，时间，自动播放，8s代表播放时间的快慢*/
+}
+/*让每张图片排在一行*/
+.sma-slide2 ul li{
+	float: left;
+	position: relative;
+}
+.sma-slide2 ul li img{
+	width: 260px;
+	height: 270px;
+}
+/*把下边的文字：毕业啦，定位到li下边，不用给每个文字加类，相同的名字，
+因为在html结构里排好了，自然而然定位到每个li身上*/
+.sma-slide2 .graduate{
+	width: 260px;
+	height: 30px;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+}
+.sma-slide2 ul li p{
+	color: #fff;
+}
+.round2{
+	width: 260px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.round2 span{
+	display: inline-block;
+	width: 10px;
+	height: 7px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.round2-d{
+	margin-left: 180px;
+}
+.round2-d .on4{
+	width: 30px;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #f45d8f;
+}
+/*使用的关键帧动画分步骤，在imgbox中设置animation动画*/
+@keyframes move {
+	0%,40%{
+		transform: translateX(0);
+	}
+	50%,90%{
+		transform: translateX(-260px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+/*==============国创模块===========*/
+#country{
+	height: 244px;
+}
+#country-link{
+	height: 180px;
+	overflow: auto;
+}
+.bg14{
+	width: 
+}
+#country-ul{
+	height: 202px;
+}
+#music{
+	margin-top: 20px;
+}
+.bg14{
+	width: 35px;
+	height: 38px;
+	background-position: -143px -463px;
+}
+/*==========特别推荐模块========*/
+.recommend{
+   width: 980px;
+   margin-top: 40px;
+}
+.bg15{
+	width: 38px;
+	height: 28px;
+	background-position: -142px -788px;
+}
+.rec-title p{
+	font-size: 22px;
+	line-height: 28px;
+	padding: 0 30px;
+	font-weight: bold;
+	color: #343333;
+}
+/*特别推荐下边的4张图片*/
+.rec-pics{
+	width: 700px;
+	margin-top: 18px;
+}
+.rec-pics ul li img{
+	width: 160px;
+	height: 100px;
+	
+}
+.rec-pics ul li{
+	width: 160px;
+	position: relative;
+	cursor: pointer;
+	float: left;
+	margin-right: 20px;
+}
+.rec-pics ul li p{
+	font-size: 12px;
+	margin-top: 30px;
+	line-height: 18px;
+	transition: 0.5s;
+}
+/*时间定位*/
+.rec-pics .rec-time{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: 80px;
+	right: 10px;
+	display: none;
+	transition: 0.5s;
+}
+/*圆形照片定位*/
+.rec-pics ul li .round1{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	position: absolute;
+	left: 5px;
+	bottom: 40px;
+}
+/*hover 的时候出现*/
+.rec-pics ul li:hover .rec-time{
+	display: block;
+}
+.rec-pics ul li:hover p{
+	color: #3A69FC;
+}
+.rec-pics ul li:nth-child(4){
+	margin-right: 0;
+}
+.bili{
+	margin: 20px 0;
+}
+/*=========底部开始=========*/
+footer{
+	height: 300px;
+	background-color: #f6f9fa;
+	margin-top: 40px;
+}
+.footer-middle{
+	width: 980px;
+	height: 260px;
+	margin: 0 auto;
+}
+.friend-link{
+   width: 326px;
+   border-right: 1px solid #ccc;
+   height: 117px;
+   margin-top: 40px;
+}
+.friend-link ul li{
+	float: left;
+	margin-right: 44px;
+	margin-bottom: 20px;
+}
+.friend-link ul li:nth-child(3){
+	margin-right: 0;
+}
+.friend-link ul li:nth-child(6){
+	margin-right: 0;
+}
+.footer-middle .friend-link{
+	float: left;
+	margin-left: 20px;
+}
+.official{
+	width: 280px;
+	height: 117px;
+	margin-top: 40px;
+}
+.official ul li{
+	width: 82px;
+	height: 80px;
+	float: left;
+	margin-right: 10px;
+}
+.bg16,.bg17,.bg18{
+	display:block;
+	background: url(../images/icons.png);
+}
+.bg16{
+	width: 56px;
+	height: 56px;
+	background-position: -1026px -196px;
+}
+.official ul li em{
+	font-style: normal;
+}
+.bg17{
+	width: 56px;
+	height: 56px;
+	background-position: -1026px -325px;
+}
+.bg18{
+	width: 56px;
+	height: 56px;
+	background-position: -1026px -68px;
+}
+.footer-middle .beian{
+	width: 980px;
+	margin-top: 20px;
+}
+.bg19{
+	background: url(../images/down.png);
+	width: 96px;
+	height: 75px;
+	background-position: 0 0;
+	margin-right: 20px;
+}
+.permission p{
+	font-size: 12px;
+	color: #8e8e8e;
+	line-height: 20px;
+}
+/*=========右侧滚动栏目=========*/
+/*屏幕一半的div，固定定位*/
+#module{
+	width: 555px;
+	/*height: 666px;*/
+	/*z-index: 99;*/
+	position: fixed;
+	left: 50%;
+	top: 232px;
+	/*background: rgba(0,0,0,0.4);*/
+	transition: top 1s linear;
+}
+/*div里面最右侧的滚动条，绝对定位top，right为0，加边框和圆角*/
+#scoll-column{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 48px;
+   height: 510px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+/*给下边的li，宽高，背景颜色，文字居中*/
+.scroll-ul li{
+	width: 48px;
+	height: 32px;
+	background-color: #f6f9fa;
+	text-align: center;
+}
+.scroll-ul li a{
+	line-height: 32px;
+	color: #000;
+}
+/*添加当前选中的li默认样式，这块注意一下优先级的问题，叫cur这个名字的li*/
+.scroll-ul li.cur{
+	background-color: #2e4d93;
+	transition: background 1s linear;
+}
+.scroll-ul li.cur a{
+	color: #fff;
+}
+/*hover li 的时候给li添加背景颜色*/
+.scroll-ul li:hover{
+	background: #2e4d93;
+}
+.scroll-ul li:hover a{
+	color: #fff;
+}
+.bg20{
+	display:inline-block;
+	background: url(../images/icons.png);
+}
+/*span是行内元素，转化为行内快*/
+.bg20{
+	width: 19px;
+	height: 10px;
+	background-position: -663px -92px;
+	margin:10px 15px;
+}

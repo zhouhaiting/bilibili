@@ -1,0 +1,29 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+
+li{
+	list-style: none;
+}
+/*img{
+	display: block;
+}*/
+a{
+	text-decoration: none;
+}
+ 
+.fl{
+	float: left;
+}
+.fr{float: right;}
+.clearfix:after{content: ""; display: block;clear: both; }
+body{
+	
+	font-size: 14px;
+}
+/*.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+a{
+	color: #000
+}
+*/
